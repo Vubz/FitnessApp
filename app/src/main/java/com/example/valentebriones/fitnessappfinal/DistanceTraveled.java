@@ -47,6 +47,10 @@ public class DistanceTraveled extends Fragment implements LocationListener {
 
         LocationManager lm = (LocationManager) this.getActivity().getSystemService(Context.LOCATION_SERVICE);
 
+        if (ActivityCompat.checkSelfPermission(this.getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this.getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return vista;
+
+        }
         lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, (LocationListener) this.getActivity());
 
             this.onLocationChanged(null);
