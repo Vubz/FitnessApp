@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new StepCounter(), "Step Counter");
         adapter.addFragment(new DistanceTraveled(),"Total Distance");
         adapter.addFragment(new Timer(), "Timer");
+        adapter.addFragment(new CalorieCounter(), "Calorie Counter");
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
