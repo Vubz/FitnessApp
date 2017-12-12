@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Add fragments to adapter
         adapter.addFragment(new StepCounter(), "Step Counter");
-        adapter.addFragment(new DistanceTraveled(),"Total Distance");
+        adapter.addFragment(new DistanceTraveled(),"Total Speed");
         adapter.addFragment(new Timer(), "Timer");
         adapter.addFragment(new CalorieCounter(), "Calorie Counter");
         viewPager.setAdapter(adapter);
